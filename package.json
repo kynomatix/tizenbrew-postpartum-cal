@@ -1,0 +1,19 @@
+{
+  "name": "tizenbrew-postpartum-cal",
+  "version": "0.1.0",
+  "description": "Storytime on the TV, launched from TizenBrew with remote support.",
+  "license": "MIT",
+  "packageType": "mods",
+  "appName": "Storytime",
+  "websiteURL": "https://postpartum-cal.replit.app/",
+  "main": "tv-shim.js",
+  "evaluateScriptOnDocumentStart": false,
+  "keys": [
+    "MediaPlayPause",
+    "MediaPlay",
+    "MediaPause"
+  ],
+  "files": [
+    "tv-shim.js"
+  ]
+}
