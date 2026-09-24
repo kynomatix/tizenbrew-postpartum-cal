@@ -12,7 +12,6 @@ This is a `mods` module, so TizenBrew loads the live site every time and injects
 
 `package.json` registers the Play/Pause keys, which the TV otherwise keeps to itself. Arrows, OK and Back always reach the page.
 
-`tv-shim.js` does two small things:
+`tv-shim.js` adds a `tizenbrew` class to the page's `<html>` element, so the site can style for the TV if it ever needs to. TizenBrew requires every `mods` module to inject a script, and that's all this one has to do.
 
-- Adds a `tizenbrew` class to the page's `<html>` element, so the site can style for the TV if it ever needs to.
-- Exits the app when Back is pressed on the site's home page, which is the one place the site leaves Back unhandled. This depends on the TV exposing its app API to websites; if it doesn't, Back does nothing there and the Home button leaves as usual.
+Back does nothing on the site's home page. TizenBrew doesn't give module pages the TV's app API, so the site has no way to close the app; use the Home button to leave.
